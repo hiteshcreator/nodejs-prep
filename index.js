@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 4000
-const sendTwilioSms = require('./src/twilio/sendSms')
 const twiloroute = require('./src/twilio/routes');
+const fakeapi = require('./src/fakeApi/routes');
 
 
 app.get('/', (req, res) => {
@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 
 // Handling routes request
 app.use("/",twiloroute);
+app.use("/",fakeapi);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
