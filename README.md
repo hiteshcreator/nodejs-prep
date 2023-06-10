@@ -17,4 +17,4 @@
 
 ## Here the <a href="https://jsonplaceholder.typicode.com/">Link</a>
 
-    **User and Post data get from the index file**
+  **User and Post data get from the index file**
