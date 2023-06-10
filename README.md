@@ -12,4 +12,9 @@
         }
     
     5   run command ** yarn start ** or directory run nodemon index.js
-#   last comment
+
+# Free Fake API:-
+
+## Here the <a href="https://jsonplaceholder.typicode.com/">Link</a>
+
+    **User and Post data get from the index file**
