@@ -1,6 +1,5 @@
 const express  = require('express')
 const app      = express()
-const mongoose = require("mongoose");
 const path     = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 
@@ -9,17 +8,7 @@ const fakeapi    = require('./src/fakeApi/routes');
 
 const port     = process.env.PORT
 
-mongoose.connect(process.env.NEW_DB,{
-  useNewUrlParser: true,
-})
-
-mongoose.connection.on("error",err =>{
-  console.log("error--",err)
-})
-
-mongoose.connection.on("connected",(err,res) =>{
-  console.log("connection is connected")
-})
+require('./src/db/conn');
 
 
 app.get('/', (req, res) => {
